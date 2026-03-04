@@ -1,1 +1,33 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Scanner de Notas</title></head><body><h1>Scanner de Notas Fiscais</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Scanner de Notas Fiscais</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Scanner de Notas Fiscais</h1>
+
+<input type="file" id="arquivo" accept="image/*,application/pdf">
+<button onclick="enviar()">Enviar Nota</button>
+
+<hr>
+
+<h2>Planilha</h2>
+<table id="tabela">
+<thead>
+<tr>
+<th>Nº Nota</th>
+<th>Data</th>
+<th>Cliente</th>
+<th>Valor</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script src="js/app.js"></script>
+</body>
+</html>
