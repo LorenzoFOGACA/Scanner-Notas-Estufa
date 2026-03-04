@@ -15,19 +15,28 @@
 <hr>
 
 <h2>Planilha</h2>
-<table id="tabela">
-<thead>
-<tr>
-<th>Nº Nota</th>
-<th>Data</th>
-<th>Cliente</th>
-<th>Valor</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody></tbody>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Nº Nota</th>
+            <th>Data</th>
+            <th>Cliente</th>
+            <th>Valor</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="tabela-corpo">
+        <!-- Linhas entram aqui -->
+    </tbody>
 </table>
 
+<br>
+
+<button onclick="exportar()">Exportar CSV</button>
+
 <script src="js/app.js"></script>
+<script src="js/planilha.js"></script>
+
 </body>
 </html>
