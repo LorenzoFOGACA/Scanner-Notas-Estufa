@@ -18,3 +18,11 @@ async function enviar() {
     };
     reader.readAsDataURL(file);
 }
+// TESTE VISUAL AUTOMÁTICO
+adicionarLinha({
+    numero_nota: 1567,
+    data_emissao: "01/03/2025",
+    cliente: "Estufa Verde Vida LTDA",
+    valor_total: 790,
+    status: "Não pago"
+});
