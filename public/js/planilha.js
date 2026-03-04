@@ -1,5 +1,6 @@
 function adicionarLinha(nota) {
-    const tbody = document.querySelector("#tabela tbody");
+    const tbody = document.getElementById("tabela-corpo");
+
     const tr = document.createElement("tr");
 
     tr.innerHTML = `
@@ -11,4 +12,22 @@ function adicionarLinha(nota) {
     `;
 
     tbody.appendChild(tr);
+}
+
+function exportar() {
+    let csv = "Numero,Data,Cliente,Valor,Status\n";
+
+    document.querySelectorAll("#tabela-corpo tr").forEach(tr => {
+        const cols = tr.querySelectorAll("td");
+        const linha = Array.from(cols).map(td => td.innerText).join(",");
+        csv += linha + "\n";
+    });
+
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "notas.csv";
+    a.click();
 }
